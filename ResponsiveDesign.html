@@ -3,64 +3,77 @@
     <title>Hello</title>
     <style>
         * {
-          margin:0;
-          border:0;
+              margin: 0;
+              padding: 0;
+              border: 0;
         }
         
         body {
-          background-color:9c0000;
+          background-color:#9c0000;
+          min-width:300px;
         }
         
         .mainContainer {
-          width:608px;
+          width:300px;
+          min-width: 300px;
           margin: 0 auto;
         }
+        
         .mainContainer > * {
-            height:300px;
+            height:200px;
         }
         
         aside {
           display:none;
-          background-color:antiquewhite;
+          width:300px;
+          background-color:orange;
         }
         
         aside.blogs {
           display:inline-block;
-          width:600px;
+          background-color:purple;
         }
         
         main {
           display:inline-block;
-          width:600px;
+          width:300px;
           background-color: bisque;
         }
         
-        @media screen and (min-width: 750px){
-            body {  background-color: #9c9c00; }
-            .mainContainer {
-                width:708px
-            }
-            main {
-              width:500px;
-            }
+        @media screen and (min-width:600px) {
+  
+             body {  background-color: #AA9c00; }
+             
+             .mainContainer {
+                    width:600px;
+             }
+             
+             aside {
+                width:200px;
+             }
+             
+           main {
+              width:400px;
+           }
             
-            aside.blogs {
-            display:inline-block;
-            width:200px;
-          }            
+ 
         }
         
-        @media screen and (min-width:1000px) {
-            body {  background-color: #009c00; }
-            .mainContainer {
-                width:950px
-            }
+        @media screen and (min-width:800px) {
             
-            aside {
-                width:200px;
-                display:inline-block;
-            }
+            body {  background-color: #009c00; }
+            
+             .mainContainer {
+                    width:800px;
+             }
+             aside {
+                  display:inline-block;
+             }
+             
+           
         }
+        
+
         
         
         
@@ -72,9 +85,8 @@
     </head>
   <body>
       <div class='mainContainer'>
-          <aside>Left hand</aside>
-          <main>This is the responsive element</main>
-          <aside class="blogs">Right Hand</aside>
+          <!-- Note spaces between the elements will render -->
+          <aside>Left hand</aside><main>This is the responsive element</main><aside class="blogs">Right Hand</aside>
        </div>
    </body>
 </html>
